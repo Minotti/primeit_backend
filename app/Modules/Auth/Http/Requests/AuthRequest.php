@@ -7,8 +7,10 @@ use Illuminate\Support\Str;
 
 class AuthRequest extends BaseFormRequest
 {
-    public function prepareForValidation()
+    public function prepareForValidation(): void
     {
+        parent::prepareForValidation();
+
         $this->merge([
            'email' => Str::lower($this->email)
         ]);
