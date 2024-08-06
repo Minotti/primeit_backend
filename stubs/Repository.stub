@@ -3,11 +3,12 @@
 namespace $NAMESPACE$\Repositories;
 
 use App\Modules\Core\Repositories\Repository;
+use $NAMESPACE$\Models\$MODULE_NAME$;
 
 class $MODULE_NAME$Repository extends Repository
 {
     public function model(): string
     {
-        return '';
+        return $MODULE_NAME$::class;
     }
 }

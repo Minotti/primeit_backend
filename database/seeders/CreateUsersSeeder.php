@@ -17,17 +17,22 @@ class CreateUsersSeeder extends Seeder
     {
         User::factory()->create([
             'email' => 'attendant@teste.com',
-            'role' => UserRoleEnum::Attendant->value
+            'role' => UserRoleEnum::ATTENDANT->value
         ]);
 
         User::factory()->create([
             'email' => 'receptionist@teste.com',
-            'role' => UserRoleEnum::Receptionist->value
+            'role' => UserRoleEnum::RECEPTIONIST->value
         ]);
 
         User::factory()->create([
             'email' => 'doctor@teste.com',
-            'role' => UserRoleEnum::Doctor->value
+            'role' => UserRoleEnum::DOCTOR->value
+        ]);
+
+        User::factory()->create([
+            'email' => 'doctor2@teste.com',
+            'role' => UserRoleEnum::DOCTOR->value
         ]);
     }
 }

@@ -40,7 +40,7 @@ abstract class Repository
      */
     public function update(int $modelId, array $attributes): Model
     {
-        return tap($this->find($modelId))->update($attributes);
+        return (tap($this->find($modelId))->update($attributes))->refresh();
     }
 
     /**
@@ -51,7 +51,7 @@ abstract class Repository
      */
     public function find(int $modelId): ?Model
     {
-        return $this->model->findOrFail($modelId);
+        return $this->model->find($modelId);
     }
 
     /**

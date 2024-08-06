@@ -114,6 +114,10 @@ class MakeModule extends Command
             [
                 'stub' => $this->getPathStubFile('Request.stub'),
                 'file' => 'Http/Requests/' .  $this->getSingularModuleName() . 'Request.php',
+            ],
+            [
+                'stub' => $this->getPathStubFile('ModuleModel.stub'),
+                'file' => 'Models/' .  $this->getSingularModuleName() . '.php',
             ]
         ];
     }
