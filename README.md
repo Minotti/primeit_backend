@@ -2,6 +2,8 @@
 
 ### Setup do projeto ###
 
+*Atenção:  Essencial ter DOCKER localmente*
+
 * Clone o projeto
 * composer install
 * cp .env.example .env
